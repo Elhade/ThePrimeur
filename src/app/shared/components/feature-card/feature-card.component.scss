@@ -1,0 +1,25 @@
+.feature-card {
+  @apply bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-200
+         border-l-4 border-[#4CAF50];
+  
+  .card-content {
+    @apply mb-6;
+  }
+
+  .card-title {
+    @apply text-2xl font-bold mb-4 text-[#4CAF50];
+  }
+
+  .card-description {
+    @apply text-gray-600;
+  }
+
+  .card-link {
+    @apply flex items-center space-x-2 text-[#FF9800] hover:text-[#F57C00] 
+           transition-colors duration-200 font-medium;
+
+    svg {
+      @apply ml-2;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.carousel {
+  @apply relative w-full overflow-hidden rounded-xl shadow-xl mb-16;
+
+  .carousel-container {
+    @apply relative;
+    
+    .carousel-slides {
+      @apply flex transition-transform duration-500 ease-in-out;
+      
+      .carousel-slide {
+        @apply w-full flex-shrink-0 relative;
+        
+        .slide-image {
+          @apply w-full h-[600px] object-cover;
+        }
+        
+        .slide-content {
+          @apply absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-white;
+          
+          .slide-title {
+            @apply text-3xl font-bold mb-2;
+          }
+          
+          .slide-description {
+            @apply text-lg text-gray-200;
+          }
+        }
+      }
+    }
+    
+    .carousel-control {
+      @apply absolute top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full
+             text-gray-800 hover:bg-white hover:text-[#4CAF50] transition-colors
+             duration-200 shadow-lg;
+      
+      &.prev {
+        @apply left-4;
+      }
+      
+      &.next {
+        @apply right-4;
+      }
+    }
+  }
+  
+  .carousel-indicators {
+    @apply absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2;
+    
+    .indicator-dot {
+      @apply w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-colors duration-200;
+      
+      &.active {
+        @apply bg-white;
+      }
+    }
+  }
+}

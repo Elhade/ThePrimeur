@@ -1,0 +1,29 @@
+.product-list-container {
+  @apply container mx-auto px-4 py-12;
+
+  .header {
+    @apply flex justify-between items-start mb-12;
+
+    .title {
+      @apply text-4xl font-bold mb-2 text-[#4CAF50];
+    }
+
+    .subtitle {
+      @apply text-gray-600;
+    }
+
+    .add-button {
+      @apply bg-[#FF9800] text-white px-6 py-3 rounded-lg font-medium 
+             hover:bg-[#F57C00] transition-colors duration-200 shadow-md
+             flex items-center space-x-2;
+
+      svg {
+        @apply mr-2;
+      }
+    }
+  }
+
+  .products-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="home-container">
+  <app-carousel [slides]="carouselSlides"></app-carousel>
+
+  <div class="hero-section">
+    <h1 class="hero-title">Bienvenue sur ThePrimeur</h1>
+    <p class="hero-subtitle">Votre partenaire de confiance pour la gestion intelligente de vos fruits et légumes frais</p>
+    <div class="hero-actions">
+      <a routerLink="/products" class="btn-primary">Découvrir nos produits</a>
+      <a routerLink="/about" class="btn-secondary">En savoir plus</a>
+    </div>
+  </div>
+  
+  <div class="features-grid">
+    <app-feature-card
+      *ngFor="let feature of features"
+      [title]="feature.title"
+      [description]="feature.description"
+      [link]="feature.link"
+      [linkText]="feature.linkText"
+      [icon]="feature.icon"
+    ></app-feature-card>
+  </div>
+
+  <div class="advantages-section">
+    <h2 class="section-title">Pourquoi choisir ThePrimeur ?</h2>
+    <div class="advantages-grid">
+      <div class="advantage-card" *ngFor="let advantage of advantages">
+        <div class="advantage-icon" [innerHTML]="advantage.icon"></div>
+        <h3 class="advantage-title">{{ advantage.title }}</h3>
+        <p class="advantage-description">{{ advantage.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

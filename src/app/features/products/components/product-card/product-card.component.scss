@@ -1,0 +1,68 @@
+.product-card {
+  @apply bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
+         transition-all duration-200;
+
+  .product-image {
+    @apply h-48 w-full overflow-hidden relative;
+
+    &:after {
+      content: '';
+      @apply absolute inset-0 bg-gradient-to-t from-black/20 to-transparent;
+    }
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  .product-info {
+    @apply p-6;
+
+    .product-header {
+      @apply flex justify-between items-start mb-4;
+
+      .product-title {
+        @apply text-xl font-bold text-gray-800;
+      }
+
+      .product-category {
+        @apply text-xs font-medium px-3 py-1 rounded-full;
+        &[data-category="FRUIT"] {
+          @apply bg-[#FDD835]/20 text-[#F57F17];
+        }
+        &[data-category="VEGETABLE"] {
+          @apply bg-[#4CAF50]/20 text-[#2E7D32];
+        }
+      }
+    }
+
+    .product-description {
+      @apply text-gray-600 text-sm mb-6;
+    }
+
+    .product-footer {
+      @apply flex justify-between items-center;
+
+      .price-stock {
+        @apply flex flex-col;
+
+        .product-price {
+          @apply text-lg font-bold text-[#4CAF50];
+        }
+
+        .product-stock {
+          @apply text-sm text-gray-500;
+
+          &.low-stock {
+            @apply text-[#E53935];
+          }
+        }
+      }
+
+      .add-to-cart {
+        @apply p-2 rounded-lg bg-[#4CAF50] text-white
+               hover:bg-green-600 transition-colors duration-200 shadow-sm;
+      }
+    }
+  }
+}

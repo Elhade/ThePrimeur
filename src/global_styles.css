@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-primary: #4CAF50;    /* Vert feuille */
+  --orange-accent: #FF9800;    /* Orange carotte */
+  --red-accent: #E53935;       /* Rouge tomate */
+  --purple-accent: #8E24AA;    /* Violet aubergine */
+  --yellow-accent: #FDD835;    /* Jaune citron */
+  --brown-earth: #795548;      /* Marron terre */
+  --cream-bg: #FFF8E1;        /* Fond crème */
+}
+
+body {
+  @apply bg-[#FFF8E1] text-gray-800 font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+p {
+  @apply text-gray-700;
+}
+
+.btn-primary {
+  @apply bg-[#4CAF50] text-white px-6 py-3 rounded-lg font-medium 
+         hover:bg-green-600 transition-colors duration-200 shadow-md;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
